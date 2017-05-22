@@ -1,0 +1,30 @@
+/*header styles*/
+.md-whiteframe {
+  margin: 20px auto;
+  width: 350px;
+}
+
+.md-headline {
+  width: 100%;
+  cursor: pointer;
+}
+
+/*city-weather component styles*/
+.city-container {
+  width: 100%;
+}
+
+.city-name {
+  display: inline-block;
+  width: 40%;
+}
+
+.city-weather {
+  display: inline-block;
+  width: 30%;
+}
+
+/*city-forecast componenet styles*/
+.forecast-date {
+  padding-right: 10px;
+}

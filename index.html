@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Foobarnian Weather App</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./vue-material.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="./vue.js"></script>
+    <script src="./vue-material.js"></script>
+  </head>
+
+  <body>
+    <div id="weatherapp">
+      <md-whiteframe md-elevation="9">
+
+        <md-toolbar>
+          <h1 class="md-headline" v-on:click="changeOrder">Foobarnian Weather App</h1>
+        </md-toolbar>
+
+          <md-list v-on:click.native.once="getForecast">
+            <md-list-item v-for="city in orderedCities">
+              <city-weather v-bind:city="city" v-bind:key="city.id"></city-weather>
+              <md-list-expand>
+                <md-list-item v-for="forecast in city.forecasts">
+                  <city-forecast v-bind:forecast="forecast" v-bind:key="forecast.id"></city-forecast>
+                </md-list-item>
+              </md-list-expand>
+            </md-list-item>
+          </md-list>
+
+      </md-whiteframe>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
