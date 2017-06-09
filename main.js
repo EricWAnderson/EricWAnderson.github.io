@@ -59,7 +59,7 @@ var weatherapp = new Vue({
       params: {
         id: cityIds,
         units: 'imperial',
-        APPID: 'f333c36f17612d7b693745b00991425a'
+        APPID: 'f0f0b4767cbe5368d836370013fac8de'
       }
     })
     .then(function (response) {
@@ -101,7 +101,7 @@ var weatherapp = new Vue({
           params: {
             id: city.openWeatherId,
             units: 'imperial',
-            APPID: 'f333c36f17612d7b693745b00991425a'
+            APPID: 'f0f0b4767cbe5368d836370013fac8de'
           }
         })
         .then(function (response) {
